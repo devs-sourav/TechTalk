@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+ul,li{
+  list-style: none;
+}
+a{
+  display: inline-block;
+}
+
+/* =============================================================================================
+                        Registration Part Start Here
+============================================================================================= */
+.reg_container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.reg_box{
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+  position: relative;
+}
+.reg_box1{
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+  position: relative;
+}
+ .reg_img{
+  width: 540px;
+  position: relative;
+}
+.regbirdtree {
+  position: absolute;
+  right: -300px;
+  top: -115px;
+  width: 100px;
+  transition: all linear 0.4s;
+  opacity: 0;
+}
+.regbirdtree1 {
+  position: absolute;
+  right: -300px;
+  top: -78px;
+  width: 100px;
+  transition: all linear 0.4s;
+  opacity: 0;
+}
+.regbirdtree img{
+  width: 100%;
+}
+.regbirdtree1 img{
+  width: 100%;
+}
+.reg_box h1{
+  position: absolute;
+  left: 20px;
+  top: -65px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1976D2;
+  z-index: 1;
+}
+
+.reg_box1 h1{
+  position: absolute;
+  left: 20px;
+  top: -90px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1976D2;
+  z-index: 1;
+}
+.reg_img img{
+  width: 100%;
+} 
+.reg_form{
+  width: 400px;
+  border-radius:15px;
+  position: relative;
+  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 10px 60px 0px; */
+  /* padding: 50px 40px 40px 40px; */
+}
+.reg_form:hover .regbirdtree{
+  right: -10px;
+  opacity: 1;
+}
+.reg_form:hover .regbirdtree1{
+  right: -10px;
+  opacity: 1;
+}
+.reg_form .MuiFormControl-root {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.reg_form .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 10px;
+}
+.reg_form .css-sghohy-MuiButtonBase-root-MuiButton-root{
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 12px;
+}
+.reg_heading h2{
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1976D2;
+  text-align: center;
+}
+.reg_heading p{
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #808080;
+  text-align: center;
+}
+.reg_signin{
+  display: flex;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+.logo{
+  width: 30px;
+  margin: 0 auto 10px auto;
+}
+.logo img{
+  width: 100%;
+}
+.reg_signin h4{
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.reg_signin .reglogbtn1{
+  color: #808080;
+}
+.reg_signin .reglogbtn{
+  color: #1976D2;
+  cursor: pointer;
+}
+/* .reg_form_container h3{
+
+} */
+/* =============================================================================================
+                        Registration Part Start Here
+============================================================================================= */
