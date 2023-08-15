@@ -5,7 +5,7 @@ import {AiFillHome , AiOutlineUser} from 'react-icons/ai'
 import {HiOutlineChatAlt , HiOutlineUserGroup} from 'react-icons/hi'
 import {CgMenuRound} from 'react-icons/cg'
 import {FiSettings} from 'react-icons/fi'
-import ProfileImage from '../assets/profile.png'
+import ProfileImage from '../assets/Profile.png'
 import { useNavigate } from "react-router-dom";
 
 const RootLayout = () => {
