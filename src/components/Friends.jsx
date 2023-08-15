@@ -24,7 +24,7 @@ const Friends = () => {
                     </div>
                 </div>
                 <div className='time_zone'>
-                    <p><HiDotsVertical/></p>
+                    <p className='fgfgfg'><HiDotsVertical/></p>
                 </div>
 
             </li>
@@ -41,7 +41,7 @@ const Friends = () => {
                     </div>
                 </div>
                 <div className='time_zone'>
-                    <p><HiDotsVertical/></p>
+                    <p className='fgfgfg'><HiDotsVertical/></p>
                 </div>
 
             </li>
@@ -58,7 +58,7 @@ const Friends = () => {
                     </div>
                 </div>
                 <div className='time_zone'>
-                    <p><HiDotsVertical/></p>
+                    <p className='fgfgfg'><HiDotsVertical/></p>
                 </div>
 
             </li>
@@ -75,7 +75,7 @@ const Friends = () => {
                     </div>
                 </div>
                 <div className='time_zone'>
-                    <p><HiDotsVertical/></p>
+                    <p className='fgfgfg'><HiDotsVertical/></p>
                 </div>
 
             </li>
@@ -92,7 +92,7 @@ const Friends = () => {
                     </div>
                 </div>
                 <div className='time_zone'>
-                    <p><HiDotsVertical/></p>
+                    <p className='fgfgfg'><HiDotsVertical/></p>
                 </div>
 
             </li>
