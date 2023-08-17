@@ -6,13 +6,10 @@ import LoginPic from '../assets/Sign UP1.jpg'
 import TreeBird from '../assets/BlueBird.gif'
 import logo from '../assets/letter-t.svg'
 import { useNavigate } from "react-router-dom";
-// RxEyeNone
 import {RxEyeNone, RxEyeOpen} from 'react-icons/rx'
 import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { getDatabase, ref, set,push } from "firebase/database";
-
-
 import { getAuth, createUserWithEmailAndPassword,updateProfile,sendEmailVerification } from "firebase/auth";
 
 let info = {

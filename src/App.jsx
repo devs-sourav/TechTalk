@@ -14,6 +14,8 @@ import Group from './pages/Group';
 import Friends from './pages/Friends';
 import People from './pages/People';
 
+
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route> 
