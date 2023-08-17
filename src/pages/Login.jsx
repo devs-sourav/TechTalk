@@ -7,6 +7,8 @@ import TreeBird from '../assets/BlueBird.gif'
 import logo from '../assets/letter-t.svg'
 import { useNavigate } from "react-router-dom";
 
+
+
 const Login = () => {
   const navigate = useNavigate();
   let handleChangePage = ()=>{
@@ -35,8 +37,13 @@ const Login = () => {
                     <h2>Sign In</h2>
                     <p>Ready To Spread Friendship</p>
                   </div>
-                  <TextField id="outlined-basic" label="Email" variant="outlined" />
-                  <TextField id="outlined-basic" label="Password" variant="outlined" />
+                  <div className='textFieldGroup'>
+                    <TextField id="outlined-basic" label="Email" variant="outlined" />
+                  </div>
+                  <div className='textFieldGroup'>
+                    <TextField id="outlined-basic" label="Password" variant="outlined" />
+                  </div>
+
                   <Button variant="contained">Login</Button>
                   <div className='reg_signin'><h4 className='reglogbtn1'>Haven't an account?</h4><h4 onClick={handleChangePage} className='reglogbtn'>Sign Up</h4></div>
                 </div>

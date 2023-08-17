@@ -100,17 +100,34 @@ a{
   right: -10px;
   opacity: 1;
 }
-.reg_form .MuiFormControl-root {
+
+.reg_form .textFieldGroup {
   width: 100%;
   margin-bottom: 40px;
+}
+.reg_form .textFieldGroup  .MuiFormControl-root {
+  width: 100%;
+  margin-bottom: 6px;
 }
 .reg_form .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
   border-radius: 10px;
 }
+.reg_form .css-h4t5eh-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root{
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 12px;
+  background: rgba(121, 109, 224, 0.356);
+  color: #808080;
+}
+/* .reg_form  span{
+  margin-left: 20px;
+} */
 .reg_form .css-sghohy-MuiButtonBase-root-MuiButton-root{
   width: 100%;
   border-radius: 10px;
   padding-top: 12px;
+  padding-bottom: 12px;
+  cursor: pointer;
 }
 .reg_heading h2{
   margin-bottom: 5px;
@@ -155,6 +172,18 @@ a{
 /* .reg_form_container h3{
 
 } */
+.textFieldGroup{
+  position: relative;
+}
+.textFieldGroup .eyefix {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+}
+
+
+
 /* =============================================================================================
                         Registration Part End Here
 ============================================================================================= */
