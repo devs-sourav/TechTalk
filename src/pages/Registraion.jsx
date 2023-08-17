@@ -170,11 +170,11 @@ const Registraion = () => {
                     {
                       userInfo.loading
                       ?
-                      <LoadingButton  loading={userInfo.loading} loadingPosition="end" variant="contained">
+                      <LoadingButton className='signupbtn'  loading={userInfo.loading} loadingPosition="end" variant="contained">
                         <span>Send</span>
                       </LoadingButton>
                       :
-                      <Button onClick={handleSignUp} variant="contained">Sign Up</Button>
+                      <Button className='signupbtn' onClick={handleSignUp} variant="contained">Sign Up</Button>
                     }
 
                   

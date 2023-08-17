@@ -44,7 +44,7 @@ const Login = () => {
                     <TextField id="outlined-basic" label="Password" variant="outlined" />
                   </div>
 
-                  <Button variant="contained">Login</Button>
+                  <Button className='signupbtn' variant="contained">Login</Button>
                   <div className='reg_signin'><h4 className='reglogbtn1'>Haven't an account?</h4><h4 onClick={handleChangePage} className='reglogbtn'>Sign Up</h4></div>
                 </div>
               </div>

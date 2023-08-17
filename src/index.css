@@ -122,7 +122,8 @@ a{
 /* .reg_form  span{
   margin-left: 20px;
 } */
-.reg_form .css-sghohy-MuiButtonBase-root-MuiButton-root{
+
+.reg_form .signupbtn{
   width: 100%;
   border-radius: 10px;
   padding-top: 12px;
