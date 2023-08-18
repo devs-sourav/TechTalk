@@ -4,7 +4,7 @@ import GroupImage from '../assets/group.png'
 
 const Block = () => {
   return (
-    <>
+    <div className='fixer_demo'>
         <div className='sticky_fix'>
             <div className='item_heading_text'>
                 <h2>Block</h2>
@@ -131,7 +131,7 @@ const Block = () => {
             </li>
         </ul>
 
-    </>
+    </div>
   )
 }
 

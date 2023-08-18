@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -12,7 +12,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from 'react-redux'
 import { userData} from '../slices/user/UserSlice'
-
+import { toast } from 'react-toastify';
 
 
 
@@ -27,10 +27,24 @@ let info = {
 
 const Login = () => {
 
+
   const navigate = useNavigate();
   const dispatch = useDispatch()
   let [ userInfo, setUserInfo] = useState(info)
   const auth = getAuth();
+
+  const notify = (msg) => toast.success(msg,{
+    position: "top-right",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+  
+
 
 
 
@@ -53,6 +67,11 @@ const Login = () => {
       eye: ! userInfo.eye,
     })
   }
+  useEffect(()=>{
+    if(localStorage.getItem("user")){
+      navigate("/techtalk/home")
+    }
+  },[])
 
   let handleSignIn = ()=>{
     let {email,password} = userInfo;
@@ -81,12 +100,32 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
         console.log(user.user)
-        navigate("/techtalk/home")
+        
         dispatch(userData(user.user))
+        localStorage.setItem("user",JSON.stringify(user.user))
+        navigate("/techtalk/home")
+        notify("Login Successful")
       })
       .catch((error) => {
         const errorCode = error.code;
         console.log(errorCode)
+
+        if(errorCode == 'auth/wrong-password'){
+          setUserInfo({
+            ...userInfo,
+            password:"",
+            error: "Wrong Password",
+            loading:false,
+          })
+        }
+        if((errorCode == 'auth/user-not-found')||(errorCode =="auth/invalid-email")){
+          setUserInfo({
+            ...userInfo,
+            email:"",
+            error: "Invalid User Email",
+            loading:false,
+          })
+        }
       });
 
 

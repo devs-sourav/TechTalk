@@ -264,7 +264,7 @@ a{
   margin-bottom: 0;
 }
 .profile_container{
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -272,7 +272,7 @@ a{
   padding: 0 4px;
 }
 .profile_container .profile_setting_icon{
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   
 }
@@ -301,8 +301,23 @@ a{
   
 } */
 .root_pad .pad{
-  padding: 20px 20px 50px 0;
+  padding: 20px 20px 20px 0;
   height: 100vh;
+}
+.setting_menu .setting_item{
+  transition: all linear 0.3s;
+}
+.setting_menu .setting_item1{
+  transition: all linear 0.3s;
+}
+
+.setting_menu .setting_item:hover{
+  background: #051481;
+  color: #fff;
+}
+.setting_menu .setting_item1:hover{
+  background: rgb(179, 0, 0);
+  color: #fff;
 }
 /* =============================================================================================
                         RootLayout Part End Here
@@ -332,7 +347,7 @@ a{
   -webkit-box-shadow: 16px 2px 25px 0px rgba(0,0,0,0.08);
   -moz-box-shadow: 16px 2px 25px 0px rgba(0,0,0,0.08);
   border-radius: 10px;
-  padding: 0 16px 16px 16px;
+  padding: 0 16px 16px 22px;
   overflow-y: scroll;
 
 }
@@ -348,7 +363,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0 16px 0;
+  padding: 10px 0 10px 0;
   background: #fff;
   z-index:99;
 }
@@ -362,13 +377,27 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  
+  margin-bottom: 25px;
 }
+.list_item_group1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin-bottom: 5px;
+}
+
 .list_item_group .img_text{
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  
+  column-gap: 20px;
+}
+.list_item_group1 .img_text{
+  display: flex;
+  align-items: center;
+  
   column-gap: 20px;
 }
 .item_heading_text h2{
@@ -380,41 +409,41 @@ a{
   cursor: pointer;
 }
 .group_image{
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
 }
 .group_image img{
   width: 100%;
   height: 100%;
 }
 .time_zone p{
-  font-size: 14px;
+  font-size: 13px;
   color: #7A7A7A;
   font-weight: 400;
   padding-right: 10px;
 }
 .item_name_text h3{
   margin-bottom: 3px;
-  font-size: 18px;
+  font-size: 14px;
   color: #222222;
   font-weight: 600;
   cursor: pointer;
 }
 .item_name_text h4{
-  font-size: 14px;
+  font-size: 12px;
   color: #7A7A7A;
   font-weight: 400;
 }
 .need_gap{
   margin-top: 8px;
 }
-.time_zone .btn1{
+.time_zone .btn1 {
   border-radius: 5px;
   color: #32375C;
   background: none;
   border: none;
-  padding: 8px 16px;
-  font-size: 18px;
+  padding: 5px 10px;
+  font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   transition: all linear 0.3s;
@@ -425,26 +454,29 @@ a{
   color: #32375C;
   background: none;
   border: none;
-  padding: 5px 13px;
-  font-size: 18px;
+  padding: 5px 10px;
+  font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   transition: all linear 0.3s;
   display: block;
   margin-left: auto;
 }
-.time_zone .btn2{
+.time_zone .btn2 {
   border-radius: 5px;
   color: #fff;
-  background: #32375C;
+  background: rgb(1, 122, 1);
   border: none;
-  padding: 5px 13px;
-  font-size: 18px;
-  font-weight: 600;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
   cursor: pointer;
   transition: all linear 0.3s;
   display: block;
   margin-bottom: 4px;
+}
+.time_zone .btn2:hover{
+  background: rgb(0, 161, 0);
 }
 .time_zone .btn1:hover{
   background: #32375C;
@@ -453,7 +485,7 @@ a{
   letter-spacing: 1px;
 }
 .time_zone .btn3:hover{
-  background: #660202;
+  background: #ec4545;
   color: #fff;
 }
 .jghgh{
@@ -461,6 +493,12 @@ a{
 }
 .time_zone .fgfgfg{
   cursor: pointer;
+}
+.fixer_demo  ul:last-child .list_item_group{
+  margin-bottom: 0;
+}
+.fixer_demo  ul:last-child .list_item_group1{
+  margin-bottom: 0;
 }
 /* =============================================================================================
                         My Group Part End Here

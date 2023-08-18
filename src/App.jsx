@@ -13,6 +13,8 @@ import Chat from './pages/Chat';
 import Group from './pages/Group';
 import Friends from './pages/Friends';
 import People from './pages/People';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -38,6 +40,7 @@ function App() {
   
   return (
     <>
+      <ToastContainer />
       <RouterProvider router={router} />
     </>
   )

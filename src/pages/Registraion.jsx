@@ -11,6 +11,7 @@ import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { getDatabase, ref, set,push } from "firebase/database";
 import { getAuth, createUserWithEmailAndPassword,updateProfile,sendEmailVerification } from "firebase/auth";
+import { toast } from 'react-toastify';
 
 let info = {
   fullname : "",
@@ -21,10 +22,23 @@ let info = {
   eye:false,
 }
 
+
+
 const Registraion = () => {
+
   const navigate = useNavigate();
   const auth = getAuth();
   const db = getDatabase();
+  const notify = (msg) => toast.success(msg,{
+    position: "top-right",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
   
   let [ userInfo, setUserInfo] = useState(info)
 
@@ -74,9 +88,9 @@ const Registraion = () => {
         displayName: fullname, photoURL: "https://i.ibb.co/VBsbBpv/avatar.png"
       }).then(() => {
         sendEmailVerification(auth.currentUser)
-
+        
         .then(()=>{
-          set(push(ref(db, 'users/')), {
+          set(ref(db, 'users/'+ user.user.uid), {
             fullname: userInfo.fullname,
             email: userInfo.email,
             profile_picture : user.user.photoURL
@@ -91,12 +105,10 @@ const Registraion = () => {
         loading:false
       })
       navigate('/login')
+      notify("Registration Complete")
     })
 
     }
-
-    
-
 
   }
 

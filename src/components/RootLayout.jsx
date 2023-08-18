@@ -7,9 +7,44 @@ import {CgMenuRound} from 'react-icons/cg'
 import {FiSettings} from 'react-icons/fi'
 import ProfileImage from '../assets/Profile.png'
 import { useNavigate } from "react-router-dom";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux'
+
 
 const RootLayout = () => {
+    const userData = useSelector((state) =>(state.loggedUser.loginUser))
+
+    const notify = (msg) => toast.success(msg,{
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
     const navigate = useNavigate();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    let handleLogOut = ()=>{
+        setAnchorEl(null);
+        navigate('/login')
+        localStorage.removeItem("user")
+        notify("Log Out Complete")
+        
+    }
 
     let handleHome = ()=>{
         navigate('/techtalk/home')
@@ -77,11 +112,21 @@ const RootLayout = () => {
                                         <img src={ProfileImage}/>
                                     </div>
                                     <div className='profile_info'>
-                                        <h3>Sourav</h3>
+                                        <h3>{userData.displayName}</h3>
                                         <h4>Edit Profile</h4>
                                     </div>
                                     <div className='profile_setting_icon'>
-                                        <FiSettings/>
+                                        <FiSettings                                                 aria-controls={open ? 'basic-menu' : undefined}
+                                                aria-haspopup="true"
+                                                aria-expanded={open ? 'true' : undefined}
+                                                onClick={handleClick}/>
+                                        <div>
+                                            <Menu className='setting_menu' id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose}MenuListProps={{ 'aria-labelledby': 'basic-button', }}>
+                                                <MenuItem className='setting_item' onClick={handleClose}>Profile</MenuItem>
+                                                <MenuItem className='setting_item' onClick={handleClose}>Settings</MenuItem>
+                                                <MenuItem className='setting_item1' onClick={handleLogOut}>Logout</MenuItem>
+                                            </Menu>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
